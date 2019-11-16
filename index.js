@@ -2,28 +2,13 @@
 
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
-const {buildSchema} = require('graphql');
-const Jimp = require('jimp');
 
-const getMap = require('./lib/map');
-
-const schema = buildSchema(`
-  type Query {
-    map(game_id: Int): String
-  }
-`);
-
-const root = {
-    map: async (args) => {
-        const map = await getMap(args.game_id);
-        return map.getBase64Async(Jimp.MIME_PNG);
-    },
-};
+const {schema, root} = require('./lib/graphql');
 
 const app = express();
 
 app.use('/graphql', graphqlHTTP({
-  schema: schema,
+  schema,
   rootValue: root,
   graphiql: true,
 }));
