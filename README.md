@@ -8,9 +8,9 @@ You'll need to export a SESSID cookie as an environment variable. The code will 
 Code
 ----
 
-`index.js` - handles the web and graphql serving
-`lib/graphql.js` - setups the graphql schema and root
-`lib/jar.js` - handles setting up the cookie jar
-`lib/store.js` - a generic server-local TTL cache
-`lib/map.js` - fetches a `.png` of the board for a game
-`lib/data.js` - fetches all the JSON data available from warfish.net for a game, and converts integers into actual integers, organizes and cross references everything. 
+* `index.js` - handles the web and graphql serving
+* `lib/graphql.js` - setups the graphql schema and root
+* `lib/jar.js` - handles setting up the cookie jar
+* `lib/store.js` - a generic server-local TTL cache
+* `lib/map.js` - fetches a `.png` of the board for a game
+* `lib/data.js` - fetches all the JSON data available from warfish.net for a game, and converts integers into actual integers, organizes and cross references everything. 
