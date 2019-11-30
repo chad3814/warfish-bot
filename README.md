@@ -18,7 +18,7 @@ Code
 * `lib/data.js` - fetches all the JSON data available from warfish.net for a game, and converts integers into actual integers, organizes and cross references everything. 
 * `lib/slack_lib.js` - utility functions related to slack
 * `lib/slack-commands/` - each `.js` file in here will be mounted as a slack command, and the channel it was issued from will have the topic parsed for data that gets passed in. Each command can optionally have a `handler` that will get mounted too to serve other data
-* * `.../map.js` - manages the map images stored to disk
-* * `.../turn.js` - not implemented yet, will be responsible for figuring out who's turn it is
-* * `.../units.js` - not implemented yet, will be responsible for dumping unit info
+  * `.../map.js` - manages the map images stored to disk
+  * `.../turn.js` - not implemented yet, will be responsible for figuring out who's turn it is
+  * `.../units.js` - not implemented yet, will be responsible for dumping unit info
 
